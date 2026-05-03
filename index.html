@@ -539,15 +539,15 @@
     'contact-sub':   { fr: 'Disponible pour une thèse CIFRE ou académique, ou un poste R&D en IA. Mobilité nationale — France entière.', en: 'Available for a CIFRE or academic PhD, or an AI R&D position. Open to relocation across France.' },
     'ci-val-loc': { fr: 'Toulouse — Mobilité nationale', en: 'Toulouse — Open to relocation' },
     'label-about':   { fr: 'À propos',            en: 'About' },
-    'heading-about': { fr: 'Profil & compétences', en: 'Profile & skills' },
+    'heading-about': { fr: 'Profil & <em>compétences</em>', en: 'Profile & <em>skills</em>' },
     'label-projects':   { fr: 'Projets',              en: 'Projects' },
-    'heading-projects': { fr: "Ce que j'ai construit", en: "What I've built" },
+    'heading-projects': { fr: "Ce que j'ai <em>construit</em>", en: "What I've <em>built</em>" },
     'label-exp':   { fr: 'Expériences',       en: 'Experience' },
-    'heading-exp': { fr: 'R&D chez Pikairos', en: 'R&D at Pikairos' },
+    'heading-exp': { fr: 'R&D chez <em>Pikairos</em>', en: 'R&D at <em>Pikairos</em>' },
     'label-qual':   { fr: 'Savoir-être',  en: 'Soft Skills' },
-    'heading-qual': { fr: 'Mes qualités', en: 'My qualities' },
+    'heading-qual': { fr: 'Mes <em>qualités</em>', en: 'My <em>qualities</em>' },
     'label-parc':   { fr: 'Parcours',              en: 'Background' },
-    'heading-parc': { fr: 'Formation & expérience', en: 'Education & experience' },
+    'heading-parc': { fr: 'Formation & <em>expérience</em>', en: 'Education & <em>experience</em>' },
     'label-contact': { fr: 'Contact', en: 'Contact' },
     'about-p1': { fr: "Ingénieur R&D en apprentissage automatique, formé en <strong>mathématiques appliquées</strong> à l'Université Toulouse III. Je me spécialise dans la détection d'anomalies en vision industrielle et le ML sur données complexes.", en: 'ML R&D Engineer trained in <strong>applied mathematics</strong> at Université Toulouse III. I specialize in anomaly detection for industrial vision and ML on complex data.' },
     'about-p2': { fr: "Avec deux expériences chez <strong>Pikairos</strong> (stage + alternance en chémo-informatique), je développe des pipelines ML modulaires sur données moléculaires réelles.", en: 'With two positions at <strong>Pikairos</strong> (internship + work-study in chemo-informatics), I develop modular ML pipelines on real molecular data.' },
@@ -575,12 +575,12 @@
   function applyLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[key] && translations[key][lang] !== undefined) {
-        if (el.hasAttribute('data-i18n-html')) {
-          el.innerHTML = translations[key][lang];
-        } else {
-          el.textContent = translations[key][lang];
-        }
+      if (!translations[key] || translations[key][lang] === undefined) return;
+      const val = translations[key][lang];
+      if (el.hasAttribute('data-i18n-html') || el.querySelector('em, strong')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
       }
     });
     html.setAttribute('lang', lang);
