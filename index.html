@@ -1229,10 +1229,6 @@
             <span class="hcv-val">0.741<span class="hcv-unit">test</span></span>
           </div>
           <div class="hcv-metric">
-            <span class="hcv-name">Catégories MVTec</span>
-            <span class="hcv-val">15<span class="hcv-unit">cat.</span></span>
-          </div>
-          <div class="hcv-metric">
             <span class="hcv-name">Expérience R&amp;D</span>
             <span class="hcv-val">2<span class="hcv-unit">ans</span></span>
           </div>
@@ -1262,7 +1258,8 @@
           <p data-i18n="about-p1" data-i18n-html="1">Ingénieur R&amp;D en apprentissage automatique, formé en
             <strong>mathématiques appliquées</strong> à l'Université Toulouse III. Je me spécialise dans la détection
             d'anomalies en vision industrielle et le ML sur données complexes — de la conception d'architectures deep
-            learning jusqu'au déploiement d'applications interactives.</p>
+            learning jusqu'au déploiement d'applications interactives.
+          </p>
           <p data-i18n="about-p2" data-i18n-html="1">Avec deux expériences chez <strong>Pikairos</strong> (stage +
             alternance en chémo-informatique), je développe des pipelines ML modulaires sur données moléculaires réelles
             — de la reproduction d'articles scientifiques jusqu'à l'intégration dans des outils industriels no-code.</p>
@@ -1342,15 +1339,20 @@
           </div>
           <div class="pc-body">
             <h3 class="pc-title" data-i18n="proj2-title">Prédiction de Survie · Leucémie AML</h3>
-            <p class="pc-desc" data-i18n="proj2-desc">Modélisation de la survie sur données réelles de patients atteints
-              de leucémie aiguë myéloblastique. Pipeline sans fuite de données, comparaison Cox régularisé et Random
-              Survival Forests.</p>
+            <p class="pc-desc" data-i18n="proj2-desc">Modélisation de la survie sur données réelles de 3 323 patients
+              atteints
+              de leucémie aiguë myéloblastique (QRT 2025). Pipeline sans fuite de données, comparaison Cox régularisé
+              et Random Survival Forest. Application Streamlit interactive permettant de prédire la courbe de survie
+              d'un patient à partir de son profil clinique.</p>
             <div class="pc-metrics">
-              <div class="pm"><span class="pm-v">0.741</span><span class="pm-l">C-index (test)</span></div>
+              <div class="pm"><span class="pm-v">0.752</span><span class="pm-l">C-index (test)</span></div>
+              <div class="pm"><span class="pm-v">0.739</span><span class="pm-l">C-index (CV)</span></div>
             </div>
-            <div class="pc-stack"><span class="ps">scikit-learn</span><span class="ps">Cox</span><span
-                class="ps">Survival Forests</span></div>
-            <a href="https://github.com/Machoudi-1" class="pc-link" target="_blank">GitHub →</a>
+            <div class="pc-stack"><span class="ps">scikit-survival</span><span class="ps">Cox PH</span><span
+                class="ps">Random Survival Forest</span><span class="ps">Streamlit</span><span class="ps">Poetry</span>
+            </div>
+            <a href="https://github.com/Machoudi-1/leukemia-survival-prediction" class="pc-link" target="_blank">GitHub
+              →</a>
           </div>
         </div>
 
@@ -1603,7 +1605,7 @@
       'proj1-title': { fr: "Détection d'Anomalies Industrielles", en: 'Industrial Anomaly Detection' },
       'proj1-desc': { fr: "Comparaison reconstruction vs représentation pour détecter des anomalies subtiles. PatchCore multiscale ResNet18, greedy coreset, seuils optimaux par indice de Youden. App Streamlit déployée avec upload multiple et heatmaps.", en: 'Reconstruction vs representation comparison for subtle anomaly detection. Multiscale ResNet18 PatchCore, greedy coreset, optimal thresholds via Youden index. Deployed Streamlit app with multi-upload and heatmaps.' },
       'proj2-title': { fr: 'Prédiction de Survie · Leucémie AML', en: 'Survival Prediction · AML Leukemia' },
-      'proj2-desc': { fr: "Modélisation de la survie sur données réelles de patients atteints de leucémie aiguë myéloblastique. Pipeline sans fuite de données, comparaison Cox régularisé et Random Survival Forests.", en: 'Survival modeling on real patient data with acute myeloid leukemia. Leak-free pipeline, comparison of regularized Cox and Random Survival Forests.' },
+      'proj2-desc': { fr: "Modélisation de la survie sur données réelles de 3 323 patients atteints de leucémie aiguë myéloblastique (QRT 2025). Pipeline sans fuite de données, comparaison Cox régularisé et Random Survival Forest. Application Streamlit interactive permettant de prédire la courbe de survie d'un patient à partir de son profil clinique.", en: 'Survival modeling on real data from 3,323 AML patients (QRT 2025). Leak-free pipeline, comparison of regularized Cox and Random Survival Forest. Interactive Streamlit app to predict a patient survival curve from their clinical profile.' },
       'proj3-title': { fr: 'Medical NLP · Comptes-rendus Cliniques', en: 'Medical NLP · Clinical Notes' },
       'proj3-desc': { fr: "Analyse automatique de notes cliniques via LLM — extraction d'entités médicales, classification, résumé structuré et Q&A sur données MIMIC-III réelles. Pipeline RAG pour questions sur documents.", en: 'Automatic clinical note analysis via LLM — medical entity extraction, classification, structured summarization and Q&A on real MIMIC-III data. RAG pipeline for document Q&A.' },
       'exp1-type': { fr: 'Alternance', en: 'Work-Study' },
