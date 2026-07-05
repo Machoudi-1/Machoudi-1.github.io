@@ -1,44 +1,17 @@
-# machoudi-1.github.io — Portfolio
+# Machoudi ADEGOUNTE
 
-Personal portfolio website of **Machoudi ADEGOUNTE**, AI R&D Engineer specialized in industrial computer vision and clinical ML.
+Welcome to my personal portfolio.
 
-🌐 **Live**: [machoudi-1.github.io](https://machoudi-1.github.io)
+This website showcases my work, projects and experience.
 
----
+🌐 **Live Portfolio**
 
-## Features
+https://machoudi-1.github.io
 
-- **Bilingual** — FR / EN switcher
-- **Dark / Light mode** — preference saved in localStorage
-- **Fully responsive** — mobile and desktop
-- **Scroll animations** — reveal on scroll
-- **Single HTML file** — no framework, no build step
+## About
 
-## Sections
-
-- Hero with key metrics card
-- About & technical skills
-- Projects (Industrial Anomaly Detection, Survival Prediction, Medical NLP)
-- R&D Experience at Pikairos
-- Soft skills
-- Education & professional background
-- Contact
-
-## Stack
-
-Pure HTML · CSS Variables · Vanilla JS
+I am an AI R&D Engineer passionate about transforming research into reliable and deployable solutions, from data exploration to production-ready applications.
 
 ---
 
-## Local preview
-
-```bash
-# Just open the file in your browser
-open index.html
-```
-
-No build step required.
-
----
-
-*Built with HTML/CSS/JS — deployed via GitHub Pages*
+© 2026 Machoudi ADEGOUNTE. All rights reserved.
