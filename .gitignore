@@ -1,0 +1,9 @@
+# Linux
+*~
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.swp
+*.swo
