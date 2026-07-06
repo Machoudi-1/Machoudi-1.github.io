@@ -159,13 +159,13 @@
   <header id="top" class="hero-shell">
     <div class="wrap hero">
       <div class="hero-copy reveal">
-        <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero_available">Disponible — Novembre 2026 ·
-            Mobilité France entière</span></span>
+        <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero_available">Mobilité France
+            entière</span></span>
         <h1>Machoudi ADEGOUNTE</h1>
         <p class="tagline" data-i18n="hero_tagline">Data Scientist · Computer Vision · MLOps</p>
-        <p class="lead" data-i18n="hero_lead">Je conçois des pipelines ML complets, de l'exploration scientifique au
-          déploiement utilisable :
-          vision industrielle, données moléculaires, modèles explicables et API prêtes à l'usage.</p>
+        <p class="lead" data-i18n="hero_lead">Je transforme des données complexes, qu'il s'agisse d'images
+          industrielles, de molécules ou de dossiers cliniques, en outils que d'autres peuvent réellement utiliser :
+          de l'expérimentation scientifique jusqu'à une application fonctionnelle.</p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projets" data-i18n="hero_projects">Voir les projets</a>
@@ -261,7 +261,6 @@
           </span>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="wrap">
@@ -386,16 +385,19 @@
           </div>
           <div class="exp-body">
             <h3><span data-i18n="role_rd_ml">Ingénieur R&D Machine Learning</span></h3>
-            <p class="exp-intro"><span data-i18n="exp_alt_intro">Conception et déploiement d'outils d'analyse de données
-                moléculaires à destination de
-                chercheurs pharmaceutiques.</span></p>
+            <p class="exp-intro"><span data-i18n="exp_alt_intro">Conception d'outils qui aident des chercheurs en
+                pharmacie à explorer et comparer visuellement des millions de molécules, pour identifier plus vite
+                des candidats médicaments prometteurs.</span></p>
             <p class="exp-missions-label"><span data-i18n="axes">Axes principaux</span></p>
             <ul class="exp-missions">
               <li><strong><span data-i18n="exp_alt_m1_bold">Cartographie moléculaire 2D</span></strong><span
-                  data-i18n="exp_alt_m1_text"> sur des collections chimiques massives : </span><span
-                  class="exp-skills">K-Means, clustering hiérarchique, PCA, UMAP, t-SNE</span></li>
-              <li><strong><span data-i18n="exp_alt_m2_bold">Librairie Python modulaire</span></strong><span
-                  data-i18n="exp_alt_m2_text"> avec tests d'intégration : </span><span class="exp-skills">Python,
+                  data-i18n="exp_alt_m1_text"> permettant de visualiser en un coup d'œil des collections de plusieurs
+                  millions de molécules (~2 200 caractéristiques chacune) : </span><span class="exp-skills">K-Means,
+                  clustering hiérarchique, PCA, UMAP, t-SNE</span></li>
+              <li><strong><span data-i18n="exp_alt_m2_bold">Librairie Python structurée en 6
+                    modules</span></strong><span data-i18n="exp_alt_m2_text"> avec tests d'intégration, sur une
+                  architecture inspirée de scikit-learn :
+                </span><span class="exp-skills">Python,
                   architecture modulaire</span></li>
               <li><strong><span data-i18n="exp_alt_m3_bold">Déploiement multiplateforme</span></strong><span
                   data-i18n="exp_alt_m3_text"> via interface en ligne de commande : </span><span class="exp-skills">CLI,
@@ -457,13 +459,16 @@
             <h3><span data-i18n="proj1_title">Détection d'anomalies industrielles</span></h3>
             <span class="domain"><span data-i18n="proj1_domain">Computer Vision · One-Class Learning</span></span>
           </div>
-          <p class="hook"><span data-i18n="proj1_hook">Détecter des défauts industriels rares et subtils,
-            </span><strong><span data-i18n="proj1_hook_bold">sans aucun exemple de défaut à
+          <p class="hook"><span data-i18n="proj1_hook">Je me suis intéressé à un problème très concret en industrie.
+              Un défaut non détecté sur une chaîne de production peut coûter cher, que ce soit en rappel produit ou
+              en risque pour l'utilisateur final. Ce projet vise à détecter automatiquement des défauts sur des
+              images de pièces industrielles,
+            </span><strong><span data-i18n="proj1_hook_bold">y compris des défauts jamais vus pendant
                 l'entraînement</span></strong>.</p>
 
           <div class="metrics">
             <div class="metric metric-blue">
-              <div class="num" data-count="0.957" data-decimals="3">0,000</div>
+              <div class="num" data-count="0.950" data-decimals="3">0,000</div>
               <div class="lbl"><span data-i18n="proj1_metric1">AUROC moyen — PatchCore, 15 catégories MVTec AD</span>
               </div>
             </div>
@@ -476,18 +481,43 @@
           <div class="blocks">
             <div class="block">
               <h4><span data-i18n="approach">Approche</span></h4>
-              <p><span data-i18n="proj1_approach">Comparaison reconstruction vs représentation. PatchCore contourne la
-                  limite des autoencodeurs qui
-                  peuvent reconstruire aussi les anomalies.</span></p>
+              <p><span data-i18n="proj1_approach_p1">J'ai mis en place et comparé deux stratégies. La première
+                  reconnaît directement l'anomalie à partir d'une représentation de l'image (</span><strong><span
+                    data-i18n="proj1_approach_patchcore">PatchCore</span></strong><span data-i18n="proj1_approach_p2">).
+                  La seconde reconstruit des pièces saines et repère ce qui se
+                  reconstruit mal (</span><strong><span data-i18n="proj1_approach_ae">autoencodeur
+                    convolutif</span></strong><span data-i18n="proj1_approach_p3">). Les deux sont testées sur
+                </span><strong><span data-i18n="proj1_approach_dataset">MVTec AD</span></strong><span
+                  data-i18n="proj1_approach_p4"> (environ 5 300 images, 15 catégories d'objets et de textures),
+                  dataset public de référence en détection d'anomalies industrielles publié par MVTec
+                  Software.</span></p>
+              <p><strong><span data-i18n="proj1_approach_keylabel">Résultat clé :</span></strong> <span
+                  data-i18n="proj1_approach_key">l'autoencodeur le plus performant reconstruit aussi bien les défauts
+                  que les pièces saines, ce qui invalide cette approche pour ce cas d'usage.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="results">Résultats</span></h4>
-              <p><span data-i18n="proj1_results">AUROC moyen de 0,957 contre 0,61 pour l'autoencoder. Analyse des
-                  espaces latents par PCA/t-SNE.</span></p>
+              <p><strong><span data-i18n="proj1_results_patchcore">PatchCore</span></strong><span
+                  data-i18n="proj1_results_p1"> atteint un AUROC moyen de </span><strong><span
+                    data-i18n="proj1_results_auroc">0,950</span></strong><span data-i18n="proj1_results_p2"> sur les
+                  15 catégories (score de discrimination entre 0 et 1). L'autoencodeur convolutif plafonne à
+                </span><strong><span data-i18n="proj1_results_ae61">0,61</span></strong><span
+                  data-i18n="proj1_results_p3">, à peine mieux que le hasard.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="industrialization">Industrialisation</span></h4>
-              <p><span data-i18n="proj1_indus">API REST, logging SQLite, Docker et interface Streamlit.</span></p>
+              <p><span data-i18n="proj1_indus_p1">Mise en place d'une API REST (</span><strong><span
+                    data-i18n="proj1_indus_fastapi">FastAPI</span></strong><span data-i18n="proj1_indus_p2">) qui
+                  renvoie un score d'anomalie en temps réel, avec un historique des prédictions stocké dans une base
+                </span><strong><span data-i18n="proj1_indus_sqlite">SQLite</span></strong><span
+                  data-i18n="proj1_indus_p3">. Le projet est conteneurisé avec </span><strong><span
+                    data-i18n="proj1_indus_docker">Docker</span></strong><span data-i18n="proj1_indus_p4"> pour un
+                  déploiement reproductible. Une application </span><strong><span
+                    data-i18n="proj1_indus_streamlit">Streamlit</span></strong><span data-i18n="proj1_indus_p5">
+                  permet de tester le modèle de façon interactive en important une image de pièce industrielle,
+                  déployée sur </span><strong><span data-i18n="proj1_indus_cloud">Streamlit Cloud</span></strong><span
+                  data-i18n="proj1_indus_p6">
+                  et accessible directement depuis ce portfolio.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="quality_xai">Explicabilité</span></h4>
@@ -503,7 +533,7 @@
             </div>
             <div class="case-links">
               <a data-config="anomalyDemo" target="_blank" rel="noopener"><span data-i18n="demo_live">Essayer
-                  l’application →</span></a>
+                  l'application →</span></a>
               <a href="https://github.com/Machoudi-1/industrial-anomaly-detection" target="_blank" rel="noopener"><span
                   data-i18n="github_arrow">GitHub
                   →</span></a>
@@ -530,8 +560,10 @@
             <h3><span data-i18n="proj2_title">Prédiction de survie en Leucémie Myéloïde Aiguë</span></h3>
             <span class="domain"><span data-i18n="proj2_domain">ML Clinique · Analyse de survie</span></span>
           </div>
-          <p class="hook"><span data-i18n="proj2_hook">Estimer le pronostic d'un patient à partir de données cliniques
-              et moléculaires
+          <p class="hook"><span data-i18n="proj2_hook">Je me suis penché sur un problème clinique important.
+              Connaître le pronostic d'un patient atteint de leucémie myéloïde aiguë dès le diagnostic aide les
+              médecins à adapter l'intensité du traitement. Ce projet l'estime à partir de données cliniques et
+              moléculaires
             </span><strong><span data-i18n="proj2_hook_bold">hétérogènes, sans fuite de données</span></strong>.
           </p>
 
@@ -549,19 +581,36 @@
           <div class="blocks">
             <div class="block">
               <h4><span data-i18n="approach">Approche</span></h4>
-              <p><span data-i18n="proj2_approach">Cox régularisé vs Random Survival Forest, avec pipeline scikit-learn
-                  strictement sans fuite de données.
-                </span></p>
+              <p><span data-i18n="proj2_approach_p1">J'ai comparé deux familles de modèles de survie, un
+                </span><strong><span data-i18n="proj2_approach_cox">modèle de Cox régularisé</span></strong><span
+                  data-i18n="proj2_approach_p2"> et une </span><strong><span data-i18n="proj2_approach_rsf">Random
+                    Survival Forest</span></strong><span data-i18n="proj2_approach_p3">, sur les données du
+                </span><strong><span data-i18n="proj2_approach_dataset">QRT Data Challenge 2025</span></strong><span
+                  data-i18n="proj2_approach_p4"> (3 323 patients, 10 centres hospitaliers européens).</span></p>
+              <p><strong><span data-i18n="proj2_approach_keylabel">Résultat clé :</span></strong> <span
+                  data-i18n="proj2_approach_key">les pratiques de mesure diffèrent selon les centres, ce qui crée un
+                  vrai risque de fuite de données. J'ai donc construit un pipeline </span><strong><span
+                    data-i18n="proj2_approach_sklearn">scikit-learn</span></strong><span
+                  data-i18n="proj2_approach_key2"> strictement cloisonné à chaque étape pour éviter ce
+                  biais.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="results">Résultats</span></h4>
-              <p><span data-i18n="proj2_results">Score de discrimination de 0,752 sur le test, avec données cliniques et
-                  moléculaires combinées.</span></p>
+              <p><span data-i18n="proj2_results_p1">Le modèle atteint un </span><strong><span
+                    data-i18n="proj2_results_cindex">C-index de 0,752</span></strong><span data-i18n="proj2_results_p2">
+                  (score de discrimination entre 0 et 1) en combinant données cliniques
+                  et moléculaires, contre </span><strong><span data-i18n="proj2_results_065">0,65</span></strong><span
+                  data-i18n="proj2_results_p3"> en
+                  clinique seul. La donnée moléculaire apporte donc une réelle valeur pronostique.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="quality_deploy">Déploiement</span></h4>
-              <p><span data-i18n="proj2_deploy">Application Streamlit d'aide à la décision : profil patient, courbe de
-                  survie, facteurs de risque.</span></p>
+              <p><span data-i18n="proj2_deploy_p1">Mise en place d'une application </span><strong><span
+                    data-i18n="proj2_deploy_streamlit">Streamlit</span></strong><span data-i18n="proj2_deploy_p2"> qui
+                  permet de saisir le profil clinique et moléculaire d'un patient et
+                  d'obtenir sa courbe de survie estimée ainsi que les facteurs de risque associés, déployée sur
+                </span><strong><span data-i18n="proj2_deploy_cloud">Streamlit Cloud</span></strong><span
+                  data-i18n="proj2_deploy_p3"> et accessible directement depuis ce portfolio.</span></p>
             </div>
             <div class="block">
               <h4><span data-i18n="in_progress">En cours</span></h4>
@@ -576,7 +625,7 @@
             </div>
             <div class="case-links">
               <a data-config="leukemiaDemo" target="_blank" rel="noopener"><span data-i18n="demo_live">Essayer
-                  l’application →</span></a>
+                  l'application →</span></a>
               <a href="https://github.com/Machoudi-1/leukemia-survival-prediction" target="_blank" rel="noopener"><span
                   data-i18n="github_arrow">GitHub →</span></a>
             </div>
@@ -622,20 +671,15 @@
 
           <p class="hook">
             <span data-i18n="proj3_hook">
-              Anticiper la défaillance d'un équipement industriel à partir de signaux capteurs
+              Je m'intéresse ici à un problème classique en industrie. Une panne non anticipée sur une ligne de
+              production coûte cher, en arrêt de production comme en réparation d'urgence. L'objectif de ce projet
+              est d'anticiper la défaillance d'un équipement à partir de ses signaux capteurs,
             </span>
             <strong>
               <span data-i18n="proj3_hook_bold">
-                avant l'apparition d'une panne.
+                avant que la panne ne survienne.
               </span>
             </strong>
-          </p>
-
-          <p class="wip-context">
-            <span data-i18n="proj3_context">
-              Jeu de données AI4I 2020. Comparaison d'approches supervisées et de détection
-              d'anomalies appliquées aux séries temporelles industrielles.
-            </span>
           </p>
 
           <div class="case-foot">
@@ -694,21 +738,16 @@
 
           <p class="hook">
             <span data-i18n="proj4_hook">
-              Prévoir la consommation électrique
+              Je me penche ici sur un problème récurrent en gestion de l'énergie. Mal anticiper la consommation
+              électrique entraîne soit du gaspillage, soit des risques de rupture d'approvisionnement. Ce projet
+              cherche à prévoir cette consommation le plus finement possible,
             </span>
 
             <strong>
               <span data-i18n="proj4_hook_bold">
-                tout en évaluant le compromis précision / coût de calcul.
+                tout en questionnant le compromis entre précision du modèle et coût de calcul.
               </span>
             </strong>
-          </p>
-
-          <p class="wip-context">
-            <span data-i18n="proj4_context">
-              Comparaison entre LSTM, TCN, XGBoost et Transformers sur le jeu de données
-              UCI Electricity.
-            </span>
           </p>
 
           <div class="case-foot">
@@ -883,20 +922,20 @@
           <span class="section-eyebrow" data-i18n="nav_about">À propos</span>
           <h2 data-i18n="about_title">Qui je suis</h2>
         </div>
-        <p><span data-i18n="about_p1">Data Scientist spécialisé en </span><strong><span
-              data-i18n="about_cv_bold">Computer Vision</span></strong><span data-i18n="about_p1_tail">, avec plus d'un
-            an d'expérience en R&D appliquée
-            sur des données industrielles et moléculaires complexes.</span></p>
-        <p><span data-i18n="about_p2">Ce qui m'anime : traiter un problème avec l'exigence d'un travail de recherche,
-            sans perdre de vue qu'un
-            modèle n'a de valeur que s'il finit entre les mains de quelqu'un qui s'en sert.</span></p>
+        <p><span data-i18n="about_p1">Data Scientist, avec une spécialisation en </span><strong><span
+              data-i18n="about_cv_bold">Computer Vision</span></strong><span data-i18n="about_p1_tail"> et une
+            expérience solide en Machine Learning appliqué à la santé, construite sur des données industrielles,
+            moléculaires et cliniques complexes.</span></p>
+        <p><span data-i18n="about_p2">Ce qui compte avant tout : traiter un problème avec la rigueur d'un travail de
+            recherche, sans jamais perdre de vue qu'un modèle n'a de valeur que le jour où quelqu'un s'en sert
+            réellement. C'est pour ça que chaque projet va jusqu'au déploiement, pas seulement jusqu'au
+            notebook.</span></p>
       </div>
       <div class="contact-card reveal">
         <h3 data-i18n="contact_title">Contact</h3>
         <ul>
           <li><span>GitHub</span><a data-config="github" target="_blank" rel="noopener"
               data-config-label="true">github.com/Machoudi-1</a></li>
-          <li><span data-i18n="contact_availability">Disponibilité</span>Novembre 2026</li>
           <li><span data-i18n="contact_mobility">Mobilité</span><span data-i18n="contact_france">France entière</span>
           </li>
         </ul>
